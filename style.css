@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Orbitron;
+    src: url(fuentes/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Orbitron;
+}
+
+canvas {
+    position: absolute;
+    filter: brightness(70%);
+    z-index: -1;
+}
+.bienvenida {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.bienvenida img {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(70%);
+    object-position: 0% 8%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    animation: subir 2.5s ease-in-out infinite;
+}
+
+@keyframes subir {
+
+
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+
+}
+
+
+.word {
+    border-bottom: 4px solid #5500b677;
+    position: absolute;
+    bottom: 1.5em;
+    font-family: Orbitron;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    line-height: 1.4em;
+    height: 1.2em;
+    padding: 0 14px 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+    animation: brillar 5s infinite;
+}
+
+.word:before {
+    content: '';
+    background-color: rgb(253, 253, 253);
+    width: 1px;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 7px;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .word{
+        font-size: 40px;
+    }
+     
+}
