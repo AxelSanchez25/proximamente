@@ -4,7 +4,7 @@ if (!wordWrapper) {
     console.error('El elemento con ID "word" no existe en el DOM.');
 } else {
     // Tu código actual aquí
-    var words = ['Proximamente','SanchezDv'],
+    var words = ['','SanchezDv'],
     wordWrapperContent = wordWrapper.innerHTML,
     addingWord = false,
     counter = 1;
@@ -34,16 +34,16 @@ setInterval(function(){
     counter = 0;
   }
 ///ASINCRONISMO
-}, 200);
+}, 300);
 }
 
 ///////fondo de luz 
 //-------------------------------------------
 const turnRatio = 0.1;   //how much the lines turns
-const bc = '121, 0, 202' //RGB line color
+const bc = '255, 255, 255, 0.11' //RGB line color
 const speed = 5;       //the line moving speed
-const lineWidth = 2;
-const backgroundColor = 'rgb(0, 0, 0)';
+const lineWidth = 4;
+const backgroundColor = 'rgba(255, 255, 255, 0.11)';
 //-------------------------------------------
 
 
